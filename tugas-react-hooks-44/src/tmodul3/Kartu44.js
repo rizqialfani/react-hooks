@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Card, Col, Row } from 'antd';
 import { Typography, Button } from 'antd';
-import { MehOutlined, SmileTwoTone } from '@ant-design/icons';
+import { MehOutlined } from '@ant-design/icons';
 
 import "antd/dist/antd.css";
 
@@ -36,10 +36,6 @@ export default class Kartu44 extends Component {
             nim: ['21120117140007', '21120117130049'],
             sIcon: true
         };
-    }
-
-    componentDidMount() {
-        alert(`Profil Kelompok 44 Akan Ditampilkan`)
     }
 
     render() {

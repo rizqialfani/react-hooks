@@ -10,15 +10,15 @@ const stateAwal = {
   nilai: 0
 }
 
-const reducer = (state, aksi) => {
-    if (aksi.hitung === 'tambahSatu') {
+const reducer = (state, action) => {
+    if (action.type === 'tambahSatu') {
         return {state, nilai: state.nilai + 1};
     }
-    else if (aksi.hitung === 'kurangSatu') {
+    else if (action.type === 'kurangSatu') {
         return {state, nilai: state.nilai - 1};
     }
-    else if (aksi.hitung === 'reset') {
-        return {state, nilai: aksi.resetNilai};
+    else if (action.type === 'reset') {
+        return {state, nilai: action.resetNilai};
     }
     else {
         return {state};
@@ -31,9 +31,9 @@ const CounterReducer = () =>{
     <div>
       <div>
         <h2 id='nilai'>{`Nilai = ${state.nilai}`}</h2>
-        <Button size='large' icon={<PlusCircleOutlined />} id='tombol-tambah' onClick = {() => dispatch({hitung:'tambahSatu'})} />
-        <Button size='large' icon={<MinusCircleOutlined />} id='tombol-kurang' onClick={() => dispatch({hitung:'kurangSatu'})} />
-        <Button size='large' icon={<DeleteOutlined />} id='tombol-reset' onClick={() => dispatch({hitung:'reset', resetNilai:0})} /> 
+        <Button size='large' icon={<PlusCircleOutlined />} id='tombol-tambah' onClick = {() => dispatch({type:'tambahSatu'})} />
+        <Button size='large' icon={<MinusCircleOutlined />} id='tombol-kurang' onClick={() => dispatch({type:'kurangSatu'})} />
+        <Button size='large' icon={<DeleteOutlined />} id='tombol-reset' onClick={() => dispatch({type:'reset', resetNilai:0})} /> 
       </div>
     </div>
   )
