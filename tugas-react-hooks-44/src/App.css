@@ -1,3 +1,29 @@
+.ant-divider{
+  color: white !important;
+  font-size: 25px !important;
+  border-top-color: white !important;
+}
+
+#tombol-tambah{
+  background-color: #4cf55a;
+  color: #282c34;
+}
+
+#tombol-kurang{
+  margin: 0 10px 0 10px !important;
+  background-color: #ffc443;
+  color: #282c34;
+}
+
+#tombol-reset{
+  background-color: #ff5741;
+  color: #282c34;
+}
+
+#nilai{
+  color: white;
+}
+
 .App {
   text-align: center;
 }
